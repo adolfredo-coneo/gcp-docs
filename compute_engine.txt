@@ -1,0 +1,51 @@
+//become root user
+sudo su
+
+//update all packages
+apt update 
+
+//install apache package using apt
+apt install apache2
+
+//list files
+ls /var/www/html
+
+//print to console
+echo "Hello World!"
+
+//send hello world to that file
+echo "Hello World!" > /var/www/html/index.html
+
+//print hostname
+echo $(hostname)
+
+//print vm ip
+echo $(hostname -i)
+
+//print to console
+echo "Hello World from $(hostname)"
+echo "Hello World from $(hostname) $(hostname -i)"
+
+//send to that file
+echo "Hello world from $(hostname) $(hostname -i)" > /var/www/html/index.html
+
+sudo service apache2 start
+
+//SImplify VM HTTP Server
+#!/bin/bash
+apt update 
+apt -y install apache2
+echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
+
+//Bootstraping
+The process of installing and configuring a server with any software, or installing OS patches when the VM instance is launched is called bootstrapping.
+
+//Hardening an image
+The process of securing an image by removing unnecessary software, locking down the OS, and installing security patches is called hardening.
+
+//There are two types of discount in GCP vm instances
+1. Sustained use discount
+2. Committed use discount
+
+//SPot VMs
+Spot VMs are preemptible VMs that can be terminated at any time. They are ideal for workloads that can be interrupted, such as batch jobs, data processing, and rendering.
