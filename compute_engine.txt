@@ -49,3 +49,6 @@ The process of securing an image by removing unnecessary software, locking down 
 
 //SPot VMs
 Spot VMs are preemptible VMs that can be terminated at any time. They are ideal for workloads that can be interrupted, such as batch jobs, data processing, and rendering.
+
+//Sole tenant nodes
+Sole tenant nodes are VMs that run on hardware that is dedicated to a single customer. They are ideal for workloads that require high levels of isolation, such as financial services, healthcare, and government.
