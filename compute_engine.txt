@@ -52,3 +52,20 @@ Spot VMs are preemptible VMs that can be terminated at any time. They are ideal 
 
 //Sole tenant nodes
 Sole tenant nodes are VMs that run on hardware that is dedicated to a single customer. They are ideal for workloads that require high levels of isolation, such as financial services, healthcare, and government.
+
+//instance groups
+Instance groups are a collection of VMs that are managed as a single entity. They are ideal for workloads that require high availability, such as web servers and batch jobs.
+- Managed instance groups
+    * Features: Auto scaling, auto healing, rolling updates, and load balancing
+- Unmanaged instance groups
+    * Features: None
+    * Not recommended unless you need different kinds of VMs
+
+//Managed instance groups
+Managed instance groups are a collection of VMs that are managed as a single entity. They are ideal for workloads that require high availability, such as web servers and batch jobs.
+- Maintains a specified number of VMs
+- Detect application failures and restarts VMs
+- Provides auto scaling
+- Add load balancing to a managed instance group
+- Create instances in multiple zones
+- Release new versions of your application with zero downtime
