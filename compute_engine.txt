@@ -69,3 +69,19 @@ Managed instance groups are a collection of VMs that are managed as a single ent
 - Add load balancing to a managed instance group
 - Create instances in multiple zones
 - Release new versions of your application with zero downtime
+
+//GCP Cloud Load Balancing
+GCP Cloud Load Balancing is a global load balancing service that distributes incoming traffic across multiple VMs. It is ideal for workloads that require high availability,
+such as web servers and batch jobs.
+Managed service
+- Load balancing across multiple zones
+- Load balancing across multiple regions
+- GC ensures that the load balancer is highly available
+- Auto scales to handle huge loads
+- Load balancers can be public or private
+Types:
+- HTTP(S) Load Balancing
+- TCP Proxy Load Balancing
+- SSL Proxy Load Balancing
+- Network Load Balancing
+- Internal TCP/UDP Load Balancing
