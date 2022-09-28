@@ -85,3 +85,141 @@ Types:
 - SSL Proxy Load Balancing
 - Network Load Balancing
 - Internal TCP/UDP Load Balancing
+
+//Managed Services
+Managed services are services that are managed by Google.
+
+//IAAS Infrastructure as a Service
+IAAS is a service that provides virtual machines, storage, and networking resources.
+Use only Infrastructure from cloud provider
+You are responsible for:
+- OS
+- Middleware
+- Application
+- Data
+- Load Balancing
+
+//PAAS Platform as a Service
+PAAS is a service that provides virtual machines, storage, networking resources, and a platform to run your application.
+Use a Platform from cloud provider
+You are responsible for:
+- configuring the platform
+- Application code
+Cloud provider is responsible for:
+- OS
+- Application runtime
+- Autoscaling, availability, and load balancing
+Varieties:
+- CAAS Container as a Service
+- FAAS Function as a Service
+- Databases as a Service
+- App Engine
+- Cloud Functions
+- Cloud Run
+
+//Containers
+Containers are a lightweight way to package and run your applications.
+- Containers are isolated from each other and bundle their own software, libraries, and configuration files
+- They share the OS kernel with other containers, running as isolated processes in user space on the host operating system
+- They are portable across clouds and OS distributions
+- They are lightweight and fast to start
+- They can be used for both stateless and stateful applications
+- They are ideal for microservices and serverless applications
+
+//Container Orchestrations
+Container orchestrations are tools that automate the deployment, scaling, and management of containers.
+- Kubernetes
+- Docker Swarm
+- Apache Mesos
+- Apache Aurora
+- Nomad
+- EKS (Elastic Kubernetes Service)
+- ECS (Elastic Container Service)
+- GKE (Google Kubernetes Engine)
+- Cloud Run
+Features:
+- Scheduling
+- Service discovery - helps containers find each other
+- Load balancing
+- Scaling
+- Rolling updates
+- Health checking
+- Self-healing
+- Secrets management
+- Resource management
+- Logging and monitoring
+- Zero downtime deployments
+
+//Serverless
+Serverless is a cloud computing execution model in which the cloud provider dynamically manages the allocation and provisioning of servers.
+- You don't have to provision or manage servers
+- You don't have to install or manage software
+- You don't have to pay for idle resources
+- You don't have to worry about scaling
+- You don't have to worry about high availability
+Remember serverless does not mean there are no servers. It means that the cloud provider manages the servers for you.
+- Pay for use, requests, or duration
+Examples:
+- Cloud Run
+- AWS Lambda
+- Azure Functions
+- Google Cloud Functions
+
+//SAAS Software as a Service
+SAAS is a service that provides a complete application that runs in the cloud.
+Use a complete application from cloud provider
+You are responsible for:
+- Configuring the software
+Cloud provider is responsible for:
+- OS
+- Application runtime
+- Middleware
+- Application
+- Autoscaling, availability, and load balancing
+Varieties:
+- CRM
+- ERP
+- HR
+- Accounting
+Examples:
+- Salesforce
+- Workday
+- SAP
+- Gmail
+
+//Shared Responsibility Model
+The shared responsibility model is a framework that defines the responsibilities of the cloud provider and the customer for security in the cloud.
+GCP provides Features to make security easier:
+- Encryption
+- Identity and access management
+- Network security
+- KMS
+
+Customer responsibilities vary with the model:
+- IAAS
+    * PAAS
+    * OS
+    * Middleware
+    * Application
+    * Data
+    * Load Balancing
+- PAAS
+    * SAAS
+    * Configuring the platform
+    * Application code
+- SAAS
+    * Configuring the software
+    * Content + access policies + usage
+
+Google Cloud is alwaus responsible for:
+- Physical security
+- Network security
+- Audit logging etc
+
+//GCP Managed Services for Compute
+GCP Managed Services for Compute are services that are managed by Google.
+- Compute Engine: IAAS
+- Google Kubernetes Engine: CAAS, Orchestrate containerized microservices on Kubernetes
+- App Engine: PAAS (Caas, Serverless), Build and run scalable web applications in a fully managed environment
+- Cloud Functions: Faas, Serverless, Run code in response to events without managing servers
+- Cloud Run: Caas, Serverless, Run and deploy highly scalable containerized applications on a fully managed environment. Does not need a cluster
