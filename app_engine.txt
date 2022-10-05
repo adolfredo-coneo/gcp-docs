@@ -1,0 +1,44 @@
+//APP Engine
+Simplest way to deploy and scale your applications in GCP
+- Provides end-to-end management of your applications
+
+Supports:
+- Java, Go, Python, PHP, Node.js, Ruby, .NET, and custom runtimes
+- Connect to variety of Google Cloud storage products (Cloud SQL etc)
+
+No usage charges
+- Pay only for the resources you use
+
+Features:
+- Automatic scaling
+- Load balancing
+- Health checks
+- Versioning
+- Traffic splitting
+
+//Compute Engine vs App Engine
+- Compute Engine: Virtual machines
+- App Engine: Managed platform for deploying applications
+- Compute Engine: More control over resources
+- App Engine: More control over application
+- Compute Engine: More expensive
+- App Engine: Less expensive
+- Compute Engine: IAAS
+- App Engine: PAAS
+- Compute Engine: More responsibility
+- App Engine: Less responsibility
+- Compute Engine: More complex
+- App Engine: Serverless
+
+//App Engine Environments
+- Standard Environment
+    * Applications run in language specific sandboxes
+    * V1: Java, Python, PHP, Go (Old version)
+    * V2: Java, Python, PHP, Go, Node.js, Ruby, .NET (New version)
+    * Complete isolation from OS/Disk
+    * Supports scale down to Zero instances
+- Flexible Environment
+    * Applications run in Docker containers
+    * Makes use of Compute Engine virtual machines
+    * Support ANY runtime (with built-in support for Java, Python, PHP, Go, Node.js, Ruby, .NET)
+    * Cannot scale down to Zero instances
