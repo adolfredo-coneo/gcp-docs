@@ -42,3 +42,10 @@ Features:
     * Makes use of Compute Engine virtual machines
     * Support ANY runtime (with built-in support for Java, Python, PHP, Go, Node.js, Ruby, .NET)
     * Cannot scale down to Zero instances
+
+//Commands
+gcloud app deploy
+gcloud app browse
+gcloud app logs tail -s default
+gcloud app versions list
+gcloud app services list
