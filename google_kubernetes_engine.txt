@@ -1,0 +1,39 @@
+//Kubernetes
+- Most popular container orchestration tool
+- Open source
+- Automates deployment, scaling, and management of containerized applications
+- Provides cluster management, including upgrades. Each cluster can have different types of virtual machines
+- Auto scaling
+- Load balancing
+- Service discovery
+- Self-healing
+- Zero downtime deployments
+
+//Google Kubernetes Engine - GKE
+- Managed Kubernetes service
+- Minimize operations with auto-repair (repair failed nodes), auto-upgrade, and auto-scaling
+- Provides Pod and cluster autoscaling
+- Enable Cloud Logging and Cloud Monitoring with simple configuration
+- Uses Container-Optimized OS (COS) for nodes, a hardened OS built by Google
+- Provides support for Persistent disks and Local SSD
+
+//Autopilot Mode - GKE
+- Simplifies cluster management
+- Automatically provisions and scales clusters
+- Reduce your operational costs in running Kubernetes clusters
+- Provides an hands-off experience
+
+//Commands
+- gcloud container clusters create [CLUSTER_NAME] --num-nodes [NUM_NODES] --zone [ZONE]
+gcloud config set project my-kubernetes-project-304910
+gcloud container clusters get-credentials my-cluster --zone us-central1-c --project my-kubernetes-project-304910
+kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+kubectl get deployment
+kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+kubectl get services
+kubectl get services --watch
+curl 35.184.204.214:8080/hello-world
+kubectl scale deployment hello-world-rest-api --replicas=3
+gcloud container clusters resize my-cluster --node-pool default-pool --num-nodes=2 --zone=us-central1-c
+kubectl autoscale deployment hello-world-rest-api --max=4 --cpu-percent=70
+kubectl get hpa
