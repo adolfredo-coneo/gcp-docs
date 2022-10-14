@@ -25,8 +25,8 @@
 
 //Commands
 - gcloud container clusters create [CLUSTER_NAME] --num-nodes [NUM_NODES] --zone [ZONE]
-gcloud config set project my-kubernetes-project-304910
-gcloud container clusters get-credentials my-cluster --zone us-central1-c --project my-kubernetes-project-304910
+gcloud config set project my-kubernetes-project-365401
+gcloud container clusters get-credentials my-cluster --zone us-central1-c --project my-kubernetes-project-365401
 kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
 kubectl get deployment
 kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
@@ -37,3 +37,31 @@ kubectl scale deployment hello-world-rest-api --replicas=3
 gcloud container clusters resize my-cluster --node-pool default-pool --num-nodes=2 --zone=us-central1-c
 kubectl autoscale deployment hello-world-rest-api --max=4 --cpu-percent=70
 kubectl get hpa
+
+//Create, deploy in 13 steps
+1. Create a Kubernetes cluster with default node pool
+    gcloud container clusters create
+2. Login to Cloud Shell
+3. Connect to the Kubernetes Cluster
+    gcloud container clusters get-credentials my-cluster --zone us-central1-c --project my-kubernetes-project-365401
+4. Deploy Microservice to Kubernetes:
+    kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+    kubectl get deployment
+    kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+    kubectl get services
+    kubectl get services --watch
+5. Increase number of instances of your microservice
+    kubectl scale deployment hello-world-rest-api --replicas=3
+    watch curl 35.184.204.214:8080/hello-world
+6. Increase number of nodes in your kubernetes cluster
+    gcloud container clusters resize my-cluster --node-pool default-pool --num-nodes=2 --zone=us-central1-c
+7. Setup auto scaling for your microservice
+    kubectl autoscale deployment hello-world-rest-api --max=4 --cpu-percent=70
+    -- Also called horizontal pod autoscaling - HPA - kubectl get hpa
+8. Setup auto scaling for your kubernetes cluster
+    gcloud container clusters update my-cluster --enable-autoscaling --min-nodes=1 --max-nodes=10
+9. Delete the microservice
+    Delete service - kubectl delete service
+    Delete deployment - kubectl delete deployment
+10.Delete the cluster
+    gcloud container clusters delete
