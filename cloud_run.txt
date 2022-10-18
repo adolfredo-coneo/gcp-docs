@@ -1,0 +1,18 @@
+//Cloud Run
+Container for Production in seconds
+- Build on top of an open standard - knative
+- Fully managed serverless platform for containerized applications
+ - Zero infrastructure management
+ - Pay only for the resources you use
+
+Fully integrated end-to-end developer experience
+- No limitations in languages, binaries, dependencies
+- Easily portable because of container based architecture
+- Cloud code, cloud build, cloud monitoring and cloud logging integrations
+
+//Cloud Run Anthos
+- Run kubernetes clusters anywhere
+- Cloud, Multi cloud and on-premise
+
+//Cloud Run for Anthos
+- Deploy your workloads to anthos clusters running on-premise or on Google Cloud

@@ -1,0 +1,10 @@
+//Cloud Functions
+- Run code in response to events
+    Write code in Node.js, Python, Go, Java, .Net and Ruby
+    Don't worry about servers or scaling ot availability
+- Pay only for the compute time you use
+    Number of invocations
+    Compute time of the invocations
+    Amount of memory and CPU provisioned
+- Time Bound - up to 60 minutes in Cloud Functions V2
+- Each execution runs in a separate instance
