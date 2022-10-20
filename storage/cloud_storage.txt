@@ -1,0 +1,15 @@
+//Cloud Storage
+- Most popular, very flexible & inexpensive storage service
+    * Serverless: Autoscaling and infinite scale
+
+- Store large objects using a key-value approach:
+    * Treats entire objects as a unit (Partial updates not allowed)
+    * Objects are stored in buckets
+    * Access control at object level
+
+- Also called object storage
+
+- Provides a RESTful API to access and modify objects
+    * Also provides CLI (gsutil) and client libraries
+
+- Store all file types 

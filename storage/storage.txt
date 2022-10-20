@@ -1,0 +1,17 @@
+//Storage Types - Block Storage and File Storage
+
+//Block Storage
+- Use Case: Harddisks attached to yout computers
+- Typically, one block storage device can be connected to one virtual server
+    Exceptions, you can attach read only block devices with multiple virtual servers and certain cloud providers are exploring multi-writer disks as well.
+- You can connect multiple different block storage devices to a single virtual server
+Used as:
+ - DAS, Direct Attached Storage
+ - SAN, Storage Area Network
+
+- GCP: Persistent Disk, Local SSDs
+
+//File Storage
+Enterprise users need a quick and easy way to share files across multiple servers
+These filse shares are shared by several virtual servers.
+- GCP: Filestore
