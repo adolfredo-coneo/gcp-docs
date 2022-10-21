@@ -13,3 +13,46 @@
     * Also provides CLI (gsutil) and client libraries
 
 - Store all file types 
+
+//Storage classes
+- Standard: Default storage class
+    * > 99.99% availability in multi region
+    * > 99.99% availability in regions
+    * 99.999999999% durability
+    * 11 9's of data integrity
+    Use Case: Frequently used data / Short period of time
+    Minimum storage: none
+- Nearline: Lower cost storage
+    * > 99.95% availability in multi region
+    * > 99.99% availability in regions
+    * 99.999999999% durability
+    * 11 9's of data integrity
+    Use Case: Read or modify once a month on average
+    Minimum storage: 30 days
+- Coldline: Lowest cost storage
+    * > 99.95% availability in multi region
+    * > 99.99% availability in regions
+    * 99.999999999% durability
+    * 11 9's of data integrity
+    Use Case: Read or modify once a quarter on average
+    Minimum storage: 90 days
+- Archive: Lowest cost storage
+    * > 99.95% availability in multi region
+    * > 99.99% availability in regions
+    * 99.999999999% durability
+    * 11 9's of data integrity
+    Use Case: Read or modify less than once a year on average
+    Minimum storage: 365 days
+
+//object lifecycle management
+* Automatically move objects between storage classes
+* Automatically delete objects
+* Can be used to automatically move objects to archive storage
+* Can be used to automatically delete objects after a certain period of time
+Allowed transitions:
+    * Standard -> Nearline
+    * Standard -> Coldline
+    * Standard -> Archive
+    * Nearline -> Coldline
+    * Nearline -> Archive
+    * Coldline -> Archive

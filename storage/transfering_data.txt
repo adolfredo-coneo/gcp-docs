@@ -1,0 +1,26 @@
+Transfering data from on premises to cloud
+Most popular data destination is Google Cloud Storage
+Options:
+• Online transfer: use gsutil or API to transfer data to GCS
+    Good for one time transfer
+
+• Storage Transfer Service: Recommended for large-scale (petabytes) online data transfers from your private data centers, AWS, Azure, adn GCP
+    You can set up repeating schedule
+    Supports incremental transfer
+    Reliable and fault tolerant
+
+Storage Transfer Service vs gsutil
+- gsutil is recommended only when you are transferring less than 1TB of data
+- Storage Transfer Service is recommended for large-scale (petabytes) online data transfers from your private data centers, AWS, Azure, and GCP
+
+Transfer Appliance
+- Transfer Appliance is a physical device that you can use to transfer large amounts of data to Google Cloud Storage
+- Transfer Appliance is recommended for large-scale (petabytes) offline data transfers from your private data centers, AWS, Azure, and GCP
+
+Transfer Appliance Process:
+1. You order a Transfer Appliance
+2. You receive the Transfer Appliance
+3. You connect the Transfer Appliance to your network
+4. You transfer data to the Transfer Appliance
+5. Ship the Transfer Appliance to Google
+6. Google transfers the data to Google Cloud Storage
